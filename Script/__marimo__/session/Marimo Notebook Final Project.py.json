@@ -1,0 +1,100 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.2",
+    "script_metadata_hash": "5b4f5c96b3f9e3a43e6d2a08418cc56d"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "8227571a733720b1d61464cebd13f659",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Load the data sets</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dff22dc2-e942-4b4a-9963-35211148b3db",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "e21cdebff72c3b0b462eac5d3b6c739b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"loaded\">\u00a1Loaded!</h3>\n<ul>\n<li>Concentrado: 91414</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "1699609a-4fd8-4c0d-80e3-5d1bd31b911a",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "2ca4e5be-f0af-464b-8c74-157e90759d4f",
+      "code_hash": "ecb38063ec2568870d0acc2e6567afae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='2ca4e5be-f0af-464b-8c74-157e90759d4f-0' random-id='38d5a686-5431-8ef9-da5e-86342192c9ee'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Index0&#92;&quot;:&#92;&quot;food share&#92;&quot;,&#92;&quot;count&#92;&quot;:91362.0,&#92;&quot;mean&#92;&quot;:0.43,&#92;&quot;std&#92;&quot;:0.17,&#92;&quot;min&#92;&quot;:0.0,&#92;&quot;25%&#92;&quot;:0.31,&#92;&quot;50%&#92;&quot;:0.42,&#92;&quot;75%&#92;&quot;:0.54,&#92;&quot;max&#92;&quot;:1.0},{&#92;&quot;Index0&#92;&quot;:&#92;&quot;log_income_pc&#92;&quot;,&#92;&quot;count&#92;&quot;:91362.0,&#92;&quot;mean&#92;&quot;:9.84,&#92;&quot;std&#92;&quot;:0.78,&#92;&quot;min&#92;&quot;:3.2,&#92;&quot;25%&#92;&quot;:9.34,&#92;&quot;50%&#92;&quot;:9.83,&#92;&quot;75%&#92;&quot;:10.33,&#92;&quot;max&#92;&quot;:15.98},{&#92;&quot;Index0&#92;&quot;:&#92;&quot;edad_jefe&#92;&quot;,&#92;&quot;count&#92;&quot;:91362.0,&#92;&quot;mean&#92;&quot;:51.53,&#92;&quot;std&#92;&quot;:15.99,&#92;&quot;min&#92;&quot;:14.0,&#92;&quot;25%&#92;&quot;:39.0,&#92;&quot;50%&#92;&quot;:51.0,&#92;&quot;75%&#92;&quot;:63.0,&#92;&quot;max&#92;&quot;:106.0},{&#92;&quot;Index0&#92;&quot;:&#92;&quot;female_head&#92;&quot;,&#92;&quot;count&#92;&quot;:91362.0,&#92;&quot;mean&#92;&quot;:0.32,&#92;&quot;std&#92;&quot;:0.47,&#92;&quot;min&#92;&quot;:0.0,&#92;&quot;25%&#92;&quot;:0.0,&#92;&quot;50%&#92;&quot;:0.0,&#92;&quot;75%&#92;&quot;:1.0,&#92;&quot;max&#92;&quot;:1.0}]&quot;' data-total-rows='4' data-total-columns='8' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;count&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;mean&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;std&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;min&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;25%&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;50%&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;75%&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;max&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;Index0&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Unique values in tam_loc: [1 4 3 2]\nOriginal data set size: 91414 rows\nAnalysis data set size: 91362 rows\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "374dc545-4148-4513-bcb5-83f262158eba",
+      "code_hash": "ebf83179ea7985a35c24ac6e9a26be6d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[E 261116 20:22:26 cell_runner:574] marimo encountered an internal error.\r\n                marimo finished executing a cell, but did not produce\r\n                a run result.\r\n    \r\n                Please copy this message and paste it in a GitHub issue:\r\n    \r\n                https://github.com/marimo-team/marimo/issues\r\n    \r\n                Any additional context of what caused this error, such\r\n                as sample code to reproduce, will help us debug.\r\n                0\r\n                \r\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "2f8032ec-46d3-480a-b310-1977c475704f",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
