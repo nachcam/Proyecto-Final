@@ -13,14 +13,19 @@ processed_path = data_path / "processed"
 print("Loading processed data...")
 df_analysis = pd.read_csv(processed_path / "enigh_analysis.csv")
 
-# 2. Define the regression formula (CEF)
+# Define the regression formula (CEF)
 formula = "food_share ~ log_income_pc + rural + log_income_pc_rural + tot_integ + menores + edad_jefe + female_head"
 
-# 3. Estimate the model (WLS with scaled weights)
+# Estimate the model (WLS with scaled weights)
 print("\nEstimating OLS regression with clustered standard errors...")
 model = smf.wls(formula=formula, data=df_analysis, weights=df_analysis['factor_scaled'])
-results = model.fit(cov_type='cluster', cov_kwds={'groups': df_analysis['upm']})
+df_analysis['cluster_var'] = df_analysis['upm'].astype(str) + "_" + df_analysis['est_dis'].astype(str)
+results = model.fit(cov_type='cluster', cov_kwds={'groups': df_analysis['cluster_var']})
 
-# 4. Print the results as text
+# Print the results as text
 print("\n REGRESSION RESULTS")
 print(results.summary().tables[1])
+print(f"\nR-squared: {results.rsquared:.4f}")
+print(f"\nNumber of observations: {int(results.nobs)}")
+print(f"\nNumber of UPMs: {int(df_analysis['upm'].nunique())}")
+print("Number of strata:", df_analysis['est_dis'].nunique())
