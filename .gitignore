@@ -1,3 +1,13 @@
-/Data
+# Ignore data folder contents
+data/*
+!data/get_data.py
+
+# Ignore other specific folders
 /Previous drafts
 /__marimo__
+
+# Ignore Python cache and system files
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
